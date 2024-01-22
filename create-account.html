@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/png"><link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <!--link(rel="stylesheet" href="./css/fonts.css")-->
+    <link rel="stylesheet" href="./css/newStyle.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Beribit</title>
+  </head>
+  <body class="body">
+    <!--include ../components/sections/header-->
+    <header class="header header--mini">
+      <div class="container"><a class="header__logo" href="/"></a>
+        <p class="header__login-link">Уже есть аккаунт? <a href="login.html"> Войти</a></p>
+      </div>
+    </header>
+    <main class="n-login">
+      <div class="n-login-inner"> 
+        <div class="n-login-slider swiper js-loginSlider">
+          <ul class="n-login-banners swiper-wrapper">
+            <li class="n-login-banner swiper-slide">
+              <h3 class="n-login-banner__text"><b>Приводи друзей</b> и<br>получай по реферальной программе <b>от</b> <span>35%</span>  </h3>
+              <div class="n-login-banner__img"> <img src="img/login/create-banner.png" alt=""></div>
+            </li>
+            <li class="n-login-banner swiper-slide">
+              <h3 class="n-login-banner__text">Торгуй с самыми низкими комиссиями на рынке  <br><b>Taker 0.15%/ Maker 0.10%</b></h3>
+              <div class="n-login-banner__img"> <img src="img/login/login-banner.png" alt=""></div>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+        <form class="n-login-form js-submittedForm" method="post">
+          <h2 class="n-login__title">Создание аккаунта </h2>
+          <p class="n-login__subtitle">Для регистрации введите все данные</p>
+          <div class="n-login-block">
+            <div class="n-login__text">Email *</div>
+            <input class="n-login__input js-inputMail" type="text" placeholder="user@beribit.com">
+            <div class="n-login__error">pochta@pochta.ru уже используется</div>
+          </div>
+          <div class="n-login-block">
+            <div class="n-pass-eye js-passwordShow"></div>
+            <div class="n-login__text">Пароль *</div>
+            <input class="n-login__input js-inputPass" type="password" placeholder="*********" autocomplete="on">
+            <div class="n-login__error">Пароль не соответствует требованиям</div>
+            <ul class="n-login__hint">
+              <li>6 символов</li>
+              <li>1 цифра</li>
+              <li>1 символ в верхнем регистре</li>
+              <li>спец. символ</li>
+            </ul>
+          </div>
+          <div class="n-login-block">
+            <div class="n-pass-eye js-passwordShow"></div>
+            <div class="n-login__text">Подтверждение пароля *</div>
+            <input class="n-login__input js-inputRepeat" type="password" placeholder="*********" autocomplete="on">
+            <div class="n-login__error">Пароли не совпадают</div>
+          </div>
+          <div class="n-login-block">
+            <div class="n-login__text">Реферальный код</div>
+            <input class="n-login__input" type="text" placeholder="Необязательное поле">
+          </div>
+          <div class="n-login-block">
+            <input class="js-settingInput js-requiredCheck" type="text" hidden name="1" value="0">
+            <div class="n-login__label js-settingLabel">Я согласен с <a href="info.html" target="_blank">Условиями обслуживания, политикой конфиденциальности и возврата средств *</a></div>
+          </div>
+          <div class="n-login-block">
+            <input class="js-settingInput js-requiredCheck" type="text" hidden name="1" value="0">
+            <div class="n-login__label js-settingLabel">Я не являюсь гражданином либо резидентом США *</div>
+          </div>
+          <div class="n-login-block">
+            <input class="js-settingInput" type="text" hidden name="1" value="0">
+            <div class="n-login__label js-settingLabel">Я согласен получать e-mail рассылку</div>
+          </div>
+          <div class="n-login-block">
+            <div class="n-login__label n-login__label--text">*- поля обязательные к заполнению</div>
+          </div>
+          <div class="n-login-block">
+            <div class="n-login__reCaptcha">reCaptcha</div>
+          </div>
+          <div class="n-login-block">
+            <button class="n-login__button js-formSend" type="submit">Регистрация</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/countUp.js"></script>
+    <script src="./js/mainSlider.js"></script>
+    <script src="./js/updateGlasses.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/simpleBar.js"></script>
+    <script src="./js/select.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="./js/body-wrapper.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/login.js"></script>
+    <div class="loader"><img src="./img/main/preloader.gif" alt="Идет загрузка"></div>
+  </body>
+</html>

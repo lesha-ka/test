@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/png"><link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <!--link(rel="stylesheet" href="./css/fonts.css")-->
+    <link rel="stylesheet" href="./css/newStyle.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Beribit</title>
+  </head>
+  <body class="body">
+    <!--include ../components/sections/header-->
+    <header class="header js-header">
+      <div class="container"><a class="header__logo" href="/"></a>
+        <div class="header__btns header__btns--tablet"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
+        <div class="burger-body js-burgerBody">
+          <nav>
+            <ul>
+              <li><a class="link" href="market.html">Биржа</a></li>
+              <li><a class="link" href="wallet.html">Кошелёк</a></li>
+              <li><a class="link" href="p2p-main.html">P2P</a></li>
+              <li><a class="link" href="info.html">Информация</a></li>
+              <li><a class="link" href="partners.html">Партнёры</a></li>
+              <li><a class="link" href="info.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__btns"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
+          <footer class="burger__footer"><a class="burger__policy" href="info.html">Политика конфиденциальности</a>
+            <p class="burger__copyright">&copy;&nbsp;2024. Все права защищены </p>
+          </footer>
+        </div><a class="header_auth-user" href="#"></a>
+        <div class="header__theme-wrapper">
+          <button class="header__theme-toggler js-themeToggler"></button>
+        </div>
+        <div class="burger-btn js-burgerBtn"></div>
+      </div>
+    </header>
+    <main class="n-p2p">
+      <div class="n-p2p-head">
+        <div class="container">
+          <h1 class="n-p2p-head__title">P2P. Внебиржевой рынок</h1>
+          <p class="n-p2p-head__subtitle">Пополнение и вывод RUB</p>
+        </div>
+      </div>
+      <section class="n-p2p-content">
+        <div class="container">
+          <div class="n-p2p-inner">
+            <aside class="n-p2p-sidebar n-p2p-block">
+              <nav class="n-p2p__nav"> 
+                <button class="n-p2p__nav-button js-p2pChange" type="button"> <span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav1.svg'); mask-image: url('img/p2p/nav1.svg');"></span>Главная</button>
+                <div class="n-p2p__links">
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav1.svg'); mask-image: url('img/p2p/nav1.svg');"></span>Главная</button>
+                  <button class="n-p2p__link js-p2pLink active"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav2.svg'); mask-image: url('img/p2p/nav2.svg');"></span>Купить RUB</button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav3.svg'); mask-image: url('img/p2p/nav3.svg');"></span>Продать RUB</button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav4.svg'); mask-image: url('img/p2p/nav4.svg');"></span>Мои объявления</button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav5.svg'); mask-image: url('img/p2p/nav5.svg');"></span>Мои сделки<span class="n-p2p__link-count">4</span></button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav6.svg'); mask-image: url('img/p2p/nav6.svg');"></span>Моя реклама</button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav7.svg'); mask-image: url('img/p2p/nav7.svg');"></span>Поддержка</button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav8.svg'); mask-image: url('img/p2p/nav8.svg');"></span>Настройки P2P</button>
+                  <button class="n-p2p__link js-p2pLink"><span class="n-p2p__link-img" style="-webkit-mask-image: url('img/p2p/nav9.svg'); mask-image: url('img/p2p/nav9.svg');"></span>Апелляции</button>
+                </div>
+              </nav>
+            </aside>
+            <div class="n-p2p-main n-p2p-add n-p2p-ad-list n-p2p-arbiter n-p2p-trade n-p2p-deal">
+              <div class="n-p2p-deal__head n-p2p-deal__head--chat">
+                <div class="n-p2p-deal-title">Покупка RUB</div>
+                <div class="n-p2p-deal-back"> </div>
+              </div>
+              <div class="n-p2p-deal__info">
+                <div class="n-p2p-deal__info-item">Цена: <span>+1,00%</span></div>
+                <div class="n-p2p-deal__info-item">Вы получите: <span>1 000 000.00</span></div>
+                <div class="n-p2p-deal__info-item">К оплате: <span>50 000.00</span></div>
+              </div>
+              <div class="n-p2p-deal__main">
+                <div class="n-p2p-deal__inner"> 
+                  <div class="n-p2p-deal__column1">
+                    <div class="n-p2p-deal__completed-deal">
+                      <h4>завершенная сделка</h4>
+                      <div class="n-p2p-deal__completed-deal-content">
+                        <div class="n-p2p-deal__completed-deal-content-text"><img src="img/p2p/p2p-arbiter/ok.svg" alt="">
+                          <div class="n-p2p-deal__completed-deal-text">
+                            <p>Сделка с&nbsp</p><span>Merchant_1&nbsp</span>
+                            <p> успешно завершена</p>
+                          </div>
+                          <p>Средства успешно зачислены Вам на счет</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="n-p2p-deal__review">
+                      <h4>Оставить отзыв</h4>
+                      <form method="POST" action="#">
+                        <div class="n-p2p-deal__review-head">
+                          <div class="n-p2p-deal__review-likes">
+                            <button class="n-p2p-deal__review-btn-likes" type="button"></button>
+                            <button class="n-p2p-deal__review-btn-likes" type="button"></button>
+                          </div>
+                          <button class="js-popupOpen js-popupOpen n-p2p-deal__review-btn" type="button" data-popup="p2p-arbiter-ok">Отправить</button>
+                        </div>
+                        <div class="n-p2p-deal__review-content">
+                          <textarea name="" placeholder="">WWWWWWWWWWWW</textarea>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="n-p2p-deal__chat"> 
+                    <form method="POST" action="#">
+                      <div class="n-p2p-deal__chat-head">Чат с продавцом <span>(Merchant_1)</span></div>
+                      <div class="n-p2p-deal__chat-body" data-simplebar data-simplebar-auto-hide="false">
+                        <!-- span.default О дополнительных условиях сделки можно договориться в чате. Дополнительные условия сделки, о которых вы сообщили могут быть использованы при разрешении споров-->
+                        <ul class="n-p2p-deal__chat-list js-chatList">
+                          <li class="n-p2p-deal__chat-block">
+                            <div class="n-p2p-deal__chat-time">21.02.2022, 14:58</div>
+                            <div class="n-p2p-deal__chat-message">
+                              <div class="n-p2p-deal__chat-name">WWWWWWWWWWWWWWW</div>
+                              <div class="n-p2p-deal__chat-text">Привет, сегодня решим</div>
+                            </div>
+                          </li>
+                          <li class="n-p2p-deal__chat-block right"> 
+                            <div class="n-p2p-deal__chat-time">21.02.2022, 14:58</div>
+                            <div class="n-p2p-deal__chat-message">
+                              <div class="n-p2p-deal__chat-name">User18</div>
+                              <div class="n-p2p-deal__chat-text">Добрый вечер, на карту какого банка делать перевод?</div>
+                            </div>
+                          </li>
+                          <li class="n-p2p-deal__chat-block">
+                            <div class="n-p2p-deal__chat-time">21.02.2022, 14:58</div>
+                            <div class="n-p2p-deal__chat-message">
+                              <div class="n-p2p-deal__chat-name">WWWWWWWWWWWWWWW</div>
+                              <div class="n-p2p-deal__chat-text">Привет, сегодня решим</div>
+                            </div>
+                          </li>
+                          <li class="n-p2p-deal__chat-block right"> 
+                            <div class="n-p2p-deal__chat-time">21.02.2022, 14:58</div>
+                            <div class="n-p2p-deal__chat-message">
+                              <div class="n-p2p-deal__chat-name">User18</div>
+                              <div class="n-p2p-deal__chat-text">Добрый вечер, на карту какого банка делать перевод?</div>
+                            </div>
+                          </li>
+                          <li class="n-p2p-deal__chat-block">
+                            <div class="n-p2p-deal__chat-time">21.02.2022, 14:58</div>
+                            <div class="n-p2p-deal__chat-message">
+                              <div class="n-p2p-deal__chat-name">WWWWWWWWWWWWWWW</div>
+                              <div class="n-p2p-deal__chat-text">Привет, сегодня решим</div>
+                            </div>
+                          </li>
+                          <li class="n-p2p-deal__chat-block right img">
+                            <div class="n-p2p-deal__chat-time">21.02.2022, 14:58</div>
+                            <div class="n-p2p-deal__chat-name">WWWWWWWWWWWWWWW</div>
+                            <div class="n-p2p-deal__chat-message"><img src="img/p2p/chat-img.jpg" alt=""></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="n-p2p-deal__chat-footer"> 
+                        <input class="n-p2p-deal__chat-input js-chatInput" type="text" placeholder="Введите сообщение...">
+                        <input class="n-p2p-deal__chat-file" type="file" id="file">
+                        <label class="n-p2p-deal__chat-file-label" for="file"></label>
+                        <button class="n-p2p-deal__chat-btn js-chatSend" type="button"> </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer__col">
+            <h3 class="footer-title">Перейди на новый уровень торговли криптовалютой.</h3>
+            <div class="footer-btns"> <a class="footer-btn btn" href="#!">Создать аккаунт  </a><a class="footer-btn footer-btn--login btn btn--border" href="#!">Войти  </a></div>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col_title accordion">Возможности</p>
+            <ul class="footer__col-list">
+              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+              <li><a href="manual.html">Пополнение криптовалюты</a></li>
+              <li><a href="manual.html">Торговые операции</a></li>
+              <li><a href="market.html">Купить Bitcoin</a></li>
+              <li><a href="market.html">Купить Etherium</a></li>
+              <li><a href="market.html">Купить USDT</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col_title accordion">Контакты</p>
+            <ul class="footer__col-list">
+              <li><a href="info.html">Центр поддержки</a></li>
+              <li><a href="mailto:support@beribit.com" target="_blank">Оставить запрос</a></li>
+              <li><a href="https://t.me/BeribitRussia" target="_blank">Официальный чат</a></li>
+              <li><a href="https://t.me/BeribitAnnouncements" target="_blank">Анонсы</a></li>
+              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+            </ul>
+            <p class="footer__col_title accordion">Поддержка</p>
+            <ul class="footer__col-list">
+              <li><a href="mailto:support@beribit.com">support@beribit.com</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col_title accordion">Условия пользования</p>
+            <ul class="footer__col-list">
+              <li><a href="info.html">О нас</a></li>
+              <li><a href="info.html">Комиссии</a></li>
+              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+            </ul>
+            <p class="footer__col_title accordion">Дополнительно</p>
+            <ul class="footer__col-list">
+              <li><a href="partners.html">Партнёры</a></li>
+              <li><a href="#">Информация о криптовалютах</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-row footer-row--border">
+          <div class="footer-logo"> <img src="./img/main/logo-footer.svg"><img class="dark" src="./img/main/logo-footerDark.svg"></div>
+          <div class="footer-center"> 
+            <div class="footer-social"> <a class="footer-social__link" href="#!"><img src="./img/main/youtube.svg" alt=""><img class="dark" src="./img/main/youtubeDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/vcru.svg" alt=""><img class="dark" src="./img/main/vcruDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/telegram.svg" alt=""><img class="dark" src="./img/main/telegramDark.svg"></a></div>
+            <div class="footer-docs"> <a class="footer-docs__link" href="#!">Пользовательское соглашение</a><a class="footer-docs__link" href="#!">Политика Cookie</a><a class="footer-docs__link" href="#!">Реферальная программа</a></div>
+          </div>
+          <div class="footer-copyright">Copyright &copy;&nbsp;2021-2024 Beribit Global Ltd.</div>
+        </div>
+      </div>
+    </footer>
+    <section class="n-popup js-popup" id="registration">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Регистрация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-title">Пароль <span class="n-popup__form-title--hint "></span>
+              <div class="n-popup__form-hint">Пароль должен быть длиной не менее 6 символов, содержать в себе, как минимум: одну цифру, один символ в нижнем и верхнем регистре и один не буквенно-цифровой символ.</div>
+            </div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-title">Подтвердите пароль</div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-title">Реферальный код</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен с <a href="#" target="_blank">Условиями обслуживания, Политикой конфиденциальности и возврата средств</a></div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я не являюсь гражданином либо резидентом США</div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен получать e-mail рассылку</div>
+            </div>
+            <div class="n-popup__btn js-popupClose">Регистрация</div>
+            <div class="n-popup__subtext">Уже есть аккаунт? <span class="js-popupOpen" data-popup="login">Авторизация<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="registration2">
+      <div class="n-popup__inner">
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Регистрация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">Выберите юрисдикцию</div>
+            <div class="select n-popup__form-select control-select-group js-selectJurisdiction">
+              <button class="select-toggle" type="button" name="country" value="RU" data-select="toggle" data-index="0"><img class="n-popup__form-select-img" src="./img/RU.svg"> Russia (Россия)</button>
+              <div class="select-dropdown">
+                <ul class="select-options">
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/RU.svg"> Russia (Россия)</li>
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/armenia.svg"> Armenia (Армения)</li>
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/belarus.svg"> Belarus (Беларусь)</li>
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/kazakhstan.svg"> Kazakhstan (Казахстан)</li>
+                  <li class="select-option" data-select="option" data-value="UZB" data-index="1"><img class="n-popup__form-select-img" src="./img/OZ.svg"> Uzbekistan (Узбекистан)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" requнуired>
+            <div class="n-popup__form-title">Реферальный код </div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-title">Пароль <span class="n-popup__form-title--hint "></span>
+              <div class="n-popup__form-hint">Пароль должен быть длиной не менее 6 символов, содержать в себе, как минимум: одну цифру, один символ в нижнем и верхнем регистре и один не буквенно-цифровой символ.</div>
+            </div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-title">Подтвердите пароль</div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен с <a href="#" target="_blank">Условиями обслуживания, Политикой конфиденциальности и возврата средств</a></div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я не являюсь гражданином либо резидентом США</div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен получать e-mail рассылку</div>
+            </div>
+            <div class="g-recaptcha n-popup__form-recaptcha" data-sitekey="КЛЮЧ_САЙТА"></div>
+            <div class="n-popup__btn js-popupClose">Регистрация</div>
+            <div class="n-popup__subtext">Уже есть аккаунт? <span class="js-popupOpen" data-popup="login">Авторизация<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="login">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Авторизация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-title">Пароль <span class="n-popup__form-title--hint "></span>
+              <div class="n-popup__form-hint">Пароль должен быть длиной не менее 6 символов, содержать в себе, как минимум: одну цифру, один символ в нижнем и верхнем регистре и один не буквенно-цифровой символ.</div>
+            </div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-label n-popup__form-label--blue js-popupOpen" data-popup="reset-pass">Восстановление пароля</div>
+            <div class="n-popup__btn js-popupClose">Войти</div>
+            <div class="n-popup__subtext">Ещё не с нами? <span class="js-popupOpen" data-popup="registration">Регистрация<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="reset-pass"> 
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title n-popup__title--phone">Восстановление</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-label">*Ссылка на восстановление будет отправлена на почту</div>
+            <div class="n-popup__btn js-popupClose">Восстановить</div>
+            <div class="n-popup__subtext">Вспомнили пароль? <span class="js-popupOpen" data-popup="login">Войти<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="login-2fa">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Авторизация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">2FA authentification</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__btn js-popupClose">Войти</div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup" id="p2p-error">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-error.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Произошла ошибка!</h5>
+              <p class="n-popup__p2p-subtitle">Вы не можете выполнить данное действие</p>
+            </div>
+          </div>
+          <p class="n-popup__p2p-description">*Сумма к&nbsp;оплате выходит за&nbsp;лимиты сделки</p>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup" id="p2p-error2">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-error.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Произошла ошибка!</h5>
+              <p class="n-popup__p2p-subtitle">Вы не можете выполнить данное действие</p>
+            </div>
+          </div>
+          <p class="n-popup__p2p-description">*Сумма к&nbsp;оплате не&nbsp;может быть меньше или равна нулю</p>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p n-popup-p2p--success js-popup" id="p2p-success"> 
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-success.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Заявка успешно создана!</h5>
+            </div>
+          </div>
+          <p class="n-popup__p2p-description">Пожалуйста, дождитесь подтверждения контрагента для начала сделки! Статус заявки&nbsp;Вы можете отследить во&nbsp;вкладке &laquo;Мои обмены&raquo;</p>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="p2p-payments">
+      <div class="n-popup__inner n-p2p-add-popup__inner">
+        <div class="n-popup__content n-p2p-add-popup">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__title">Выберите метод оплаты</div>
+          <div class="n-p2p-add-popular">
+            <h4>Наиболее популярные</h4>
+            <div class="n-p2p-add-checkboks">
+              <form class="n-p2p-add-popup__form" action="#" method="post">
+                <div class="n-profile-table__checkbox">
+                  <input class="js-settingInput" type="text" hidden name="1" value="0">
+                  <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="1">Сбербанк</div>
+                </div>
+                <div class="n-profile-table__checkbox">
+                  <input class="js-settingInput" type="text" hidden name="2" value="0">
+                  <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="2">Альфа - банк</div>
+                </div>
+                <div class="n-profile-table__checkbox">
+                  <input class="js-settingInput" type="text" hidden name="3" value="0">
+                  <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Тинькофф</div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="n-p2p-add-all_ways">
+            <div class="n-p2p-add-all__ways_header">
+              <h4>Все способы оплаты</h4>
+              <div class="n-p2p-add-input-box open">
+                <input class="n-p2p-add-popup-js-pairSearch js-pairSearch" type="text" placeholder="Поиск..."><span><img src="img/p2p/p2p-ad/search.svg" alt=""></span>
+              </div>
+            </div>
+            <form class="n-p2p-add-popup__form active" action="#" method="post" data-tab="history-tab-1" data-simplebar data-simplebar-auto-hide="false">
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="1" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="1">Сбербанк</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="2" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="2">Россельхозбанк</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Альфа - банк</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Газпромбанк</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Система быстрых платежей</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Уралсиб</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">ВТБ</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Раффайзенбанк</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Тинькофф</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">ФК Открытие</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Московский кредитный банк</div>
+              </div>
+              <div class="n-profile-table__checkbox active">
+                <input class="js-settingInput" type="text" hidden name="3" value="0">
+                <div class="n-profile-table__label js-settingLabel js-settingNotification" data-notification="3">Росбанк</div>
+              </div>
+            </form>
+          </div>
+          <div class="n-popup__controls">
+            <div class="n-popup__control js-popupClose js-popupSave">Применить</div>
+            <div class="n-popup__control js-popupClose">Отмена</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup" id="p2p-attention">
+      <div class="n-popup__inner n-p2p-add-list-popup__inner">
+        <div class="n-popup__content n-p2p-add-list-popup">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/p2p-ad-list/attention.svg" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Внимание!</h5>
+              <p class="n-popup__p2p-subtitle">Редактирование возможно только после деактивации объявления</p>
+            </div>
+          </div>
+          <div class="n-popup__controls">
+            <div class="n-popup__control js-popupClose js-popupSave">Деактивировать</div>
+            <div class="n-popup__control js-popupClose">Отмена</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup" id="p2p-delete">
+      <div class="n-popup__inner n-p2p-add-list-popup__inner">
+        <div class="n-popup__content n-p2p-add-list-popup">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/p2p-ad-list/attention.svg" alt=""></div>
+            <div class="n-popup__p2p-text n-popup__p2p-text-delete">
+              <h5 class="n-popup__p2p-title">Вы уверены, что хотите удалить объявление?</h5>
+            </div>
+          </div>
+          <div class="n-popup__controls">
+            <div class="n-popup__control js-popupClose js-popupSave">Удалить</div>
+            <div class="n-popup__control js-popupClose">Отмена</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup" id="p2p-settings">
+      <div class="n-popup__inner n-p2p-add-list-popup__inner">
+        <div class="n-popup__content n-p2p-add-list-popup blue">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/p2p-ad-list/delete.svg" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Настройки</h5>
+              <p class="n-popup__p2p-subtitle">Amet minim mollit non deserunt ullamco est sit</p>
+            </div>
+          </div>
+          <div class="n-popup__controls">
+            <div class="n-popup__control js-popupClose js-popupSave">Удалить</div>
+            <div class="n-popup__control js-popupClose">Отмена</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup" id="p2p-p2p-ad-ls-error">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-error.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Произошла ошибка!</h5>
+              <p class="n-popup__p2p-subtitle">Вы не можете выполнить данное действие</p>
+            </div>
+          </div>
+          <p class="n-popup__p2p-description">По объявлению открыты сделки</p>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p n-popup-p2p--success js-popup" id="p2p-ad-ls-okey">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-success.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Заявка успешно удалена!</h5>
+            </div>
+          </div>
+          <p class="n-popup__p2p-description"> </p>
+        </div>
+      </div>
+    </section>
+    <!--p2p-arbiter-panel popups-->
+    <section class="n-popup n-popup-p2p n-popup--arbiter-cancel js-popup" id="p2p-arbiter-cancel">
+      <div class="n-popup__inner n-p2p-add-list-popup__inner">
+        <div class="n-popup__content n-p2p-add-list-popup blue">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Вы уверены что хотите отменить сделку?</h5>
+              <p class="n-popup__p2p-subtitle">В случае отмены сделки заблокированные средства вернутся продавцу обратно на счет</p>
+            </div>
+          </div>
+          <div class="n-popup__p2p-form">
+            <div>
+              <h3>Google 2FA</h3>
+              <div class="n-popup__p2p-input">
+                <input type="text" value="hgkswjkll"><span>*Введен неправильный код</span>
+              </div>
+              <div class="n-popup__controls">
+                <div class="n-popup__control js-popupClose js-popupSave">Подтвердить</div>
+                <div class="n-popup__control js-popupClose">Назад</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p n-popup--arbiter-close js-popup" id="p2p-arbiter-close">
+      <div class="n-popup__inner n-p2p-add-list-popup__inner">
+        <div class="n-popup__content n-p2p-add-list-popup blue">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Вы уверены что хотите закрыть сделку?</h5>
+              <p class="n-popup__p2p-subtitle">В случае закрытия сделки заблокированные средства продавца  перейдут на счет покупателю</p>
+            </div>
+          </div>
+          <div class="n-popup__p2p-form">
+            <div>
+              <h3>Google 2FA</h3>
+              <div class="n-popup__p2p-input">
+                <input type="text" value="hgkswjkll"><span>*Введен неправильный код</span>
+              </div>
+              <div class="n-popup__controls">
+                <div class="n-popup__control js-popupClose js-popupSave">Подтвердить</div>
+                <div class="n-popup__control js-popupClose">Назад</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p n-popup--arbiter-change js-popup" id="p2p-arbiter-change">
+      <div class="n-popup__inner n-p2p-add-list-popup__inner">
+        <div class="n-popup__content n-p2p-add-list-popup blue">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Измените лимиты сделки</h5>
+              <p class="n-popup__p2p-subtitle"></p>
+            </div>
+          </div>
+          <div class="n-popup__p2p-form">
+            <div>
+              <h3>Покупатель получит</h3>
+              <div class="n-popup__p2p-input error">
+                <input type="text" value="hgkswjkll"><span>*Сумма введена неправильно</span>
+              </div>
+              <h3>Продавец получит</h3>
+              <div class="n-popup__p2p-input">
+                <input type="text" value="hgkswjkll"><span>*Введен неправильный код</span>
+              </div>
+              <h3>Google 2FA</h3>
+              <div class="n-popup__p2p-input error">
+                <input type="text" value="hgkswjkll"><span>*Введен неправильный код</span>
+              </div>
+              <div class="n-popup__controls">
+                <div class="n-popup__control js-popupClose js-popupSave">Подтвердить</div>
+                <div class="n-popup__control js-popupClose">Назад</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p n-popup--arbiter-error js-popup" id="p2p-arbiter-error">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-error.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Внимание!</h5>
+              <p class="n-popup__p2p-subtitle">Для отправки отзыва, вам необходимо поставить оценку, либо отставить комментарий</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p js-popup n-popup-p2p--success n-popup--arbiter-ok" id="p2p-arbiter-ok">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-img"><img src="./img/p2p/popup-success.png" alt=""></div>
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Спасибо! Отзыв успешно отправлен.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup n-popup-p2p n-popup-p2p--paid js-popup" id="p2p-deal-paid">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <div class="n-popup__p2p-head"> 
+            <div class="n-popup__p2p-text">
+              <h5 class="n-popup__p2p-title">Подтвердите перевод средств на данную карту</h5>
+              <p class="n-popup__p2p-card">1234 5678 9100 0000</p>
+            </div>
+          </div>
+          <p class="n-popup__p2p-warning">Не подтверждайте оплату до совершения фактического перевода денежных средств. В случае нарушения данного условия, сделка может быть аннулирована!</p>
+          <div class="n-popup__controls"> 
+            <div class="n-popup__control js-popupClose">Отмена </div>
+            <div class="n-popup__control js-popupClose">Подтвердить</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="p2p-deal-canceled">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__content">
+          <div class="n-popup__close js-popupClose"></div>
+          <h5 class="n-popup__title">Подтвердите отмену сделки</h5>
+          <p class="n-popup__text">Вы уверены, что хотите отменить сделку?</p>
+          <div class="n-popup__controls"> 
+            <div class="n-popup__control js-popupClose">Отмена </div>
+            <div class="n-popup__control js-popupClose">Подтвердить</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/countUp.js"></script>
+    <script src="./js/mainSlider.js"></script>
+    <script src="./js/updateGlasses.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/simpleBar.js"></script>
+    <script src="./js/select.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="./js/body-wrapper.js"></script>
+    <script src="./js/p2p-nav.js"></script>
+    <script src="./js/p2p-ad.js"></script>
+    <div class="loader"><img src="./img/main/preloader.gif" alt="Идет загрузка"></div>
+  </body>
+</html>

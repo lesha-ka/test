@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/png"><link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <!--link(rel="stylesheet" href="./css/fonts.css")-->
+    <link rel="stylesheet" href="./css/newStyle.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Beribit</title>
+  </head>
+  <body class="body">
+    <!--include ../components/sections/header-->
+    <header class="header js-header">
+      <div class="container"><a class="header__logo" href="/"></a>
+        <div class="header__btns header__btns--tablet"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
+        <div class="burger-body js-burgerBody">
+          <nav>
+            <ul>
+              <li><a class="link" href="market.html">Биржа</a></li>
+              <li><a class="link" href="wallet.html">Кошелёк</a></li>
+              <li><a class="link" href="p2p-main.html">P2P</a></li>
+              <li><a class="link" href="info.html">Информация</a></li>
+              <li><a class="link" href="partners.html">Партнёры</a></li>
+              <li><a class="link" href="info.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__btns"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
+          <footer class="burger__footer"><a class="burger__policy" href="info.html">Политика конфиденциальности</a>
+            <p class="burger__copyright">&copy;&nbsp;2024. Все права защищены </p>
+          </footer>
+        </div><a class="header_auth-user" href="#"></a>
+        <div class="header__theme-wrapper">
+          <button class="header__theme-toggler js-themeToggler"></button>
+        </div>
+        <div class="burger-btn js-burgerBtn"></div>
+      </div>
+    </header>
+    <main> 
+      <div class="container main">
+        <aside class="n-menu" id="menu">
+          <button class="n-menu__btn n-menu__transaction" id="menu-btn">История сделок</button>
+          <ul class="n-menu__list">
+            <li class="n-menu__item n-menu__item_active">
+              <button class="n-menu__link n-menu__orders">Мои ордера</button>
+            </li>
+            <li class="n-menu__item">
+              <button class="n-menu__link n-menu__transaction">История сделок</button>
+            </li>
+            <li class="n-menu__item">
+              <button class="n-menu__link n-menu__account">История счета Фиат</button>
+            </li>
+            <li class="n-menu__item">
+              <button class="n-menu__link n-menu__cryptocurrency">История счета Криптовалюты</button>
+            </li>
+            <li class="n-menu__item">
+              <button class="n-menu__link n-menu__p2p">История P2P сделок</button>
+            </li>
+            <li class="n-menu__item">
+              <button class="n-menu__link n-menu__codes">Коды Beribit</button>
+            </li>
+            <li class="n-menu__item">
+              <button class="n-menu__link n-menu__turnover">Торговый оборот</button>
+            </li>
+          </ul>
+        </aside>
+        <!--  Панель инструментов -->
+        <section class="n-toolbar">
+          <form class="n-search" action="#">
+            <button class="n-search__btn" id="menu-btn"></button>
+            <input class="n-search__inp" type="text" placeholder="Поиск по таблице...">
+          </form>
+          <div class="n-toolbar__blok">
+            <div class="n-filter" id="n-filter">
+              <button class="n-filter__btn_tel n-filter__btn"><span class="n-filter__text">Фильтр</span></button>
+              <button class="n-filter__open n-filter__btn"></button>
+              <ul class="n-filter__list">
+                <li class="n-filter__item n-filter__switch">
+                  <p class="n-filter__triger">По времени</p>
+                </li>
+                <li class="n-filter__item n-filter__more">
+                  <p class="n-filter__triger">По паре</p>
+                  <ul class="n-filter__options">
+                    <li class="n-filter__option">
+                      <input class="n-filter__radio" id="couple-1" type="radio" name="couple" onclick="foo(this)">
+                      <label class="n-filter__option-name" for="couple-1">USDT-RUB</label>
+                    </li>
+                    <li class="n-filter__option">
+                      <input class="n-filter__radio" id="couple-2" type="radio" name="couple" onclick="foo(this)">
+                      <label class="n-filter__option-name" for="couple-2">BTC-USDT</label>
+                    </li>
+                    <li class="n-filter__option">
+                      <input class="n-filter__radio" id="couple-3" type="radio" name="couple" onclick="foo(this)">
+                      <label class="n-filter__option-name" for="couple-3">ETH-USDT</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="n-filter__item n-filter__more">
+                  <p class="n-filter__triger">По направлению</p>
+                  <ul class="n-filter__options">
+                    <li class="n-filter__option">
+                      <input class="n-filter__radio" id="orientation-1" type="radio" name="orientation" onclick="foo(this)">
+                      <label class="n-filter__option-name" for="orientation-1">Покупка</label>
+                    </li>
+                    <li class="n-filter__option">
+                      <input class="n-filter__radio" id="orientation-2" type="radio" name="orientation" onclick="foo(this)">
+                      <label class="n-filter__option-name" for="orientation-2">Продажа</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <button class="to-exel">Экспорт Excel</button>
+            <button class="to-csv">Экспорт CSV</button>
+          </div>
+        </section>
+        <!--  Таблица -->
+        <section class="n-table" id="table">
+          <table class="account-history-cryptocurrencies n-table__fiat n-table__blok">
+            <thead class="n-table__head">
+              <tr class="n-table__line">
+                <th class="n-table__title n-table__cell">Время</th>
+                <th class="n-table__title n-table__cell">Тип</th>
+                <th class="n-table__title n-table__cell">Сумма</th>
+                <th class="n-table__title n-table__cell">Комиссия</th>
+                <th class="n-table__title n-table__cell">Код</th>
+                <th class="n-table__title n-table__cell">Статус</th>
+              </tr>
+            </thead>
+            <tbody class="n-table__body">
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Вывод</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">10 000.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">24008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отмена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Вывод (Карта любого банка)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+              <tr class="n-table__line">
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Время</p>
+                  <p class="n-table__value">23.06.2020, 18:24</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Тип</p>
+                  <p class="n-table__value">Пополнение (г.Санкт-Петербург)</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Сумма</p>
+                  <p class="n-table__value">101 500.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Комиссия</p>
+                  <p class="n-table__value">0.00 RUB</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Код</p>
+                  <p class="n-table__value">2008</p>
+                </td>
+                <td class="n-table__cell">
+                  <p class="n-table__title-line">Статус</p>
+                  <p class="n-table__value">Отклонена</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="n-table__no-contect">Данные отсутствуют</p>
+        </section>
+        <div class="n-pages"><a class="n-pages__item" href="#"></a><a class="n-pages__item n-pages__item_active" href="#"><span>1</span></a><a class="n-pages__item" href="#"><span>2</span></a><a class="n-pages__item" href="#"><span>...</span></a><a class="n-pages__item" href="#"><span>12</span></a><a class="n-pages__item" href="#"><span>13</span></a><a class="n-pages__item" href="#"></a></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer__col">
+            <h3 class="footer-title">Перейди на новый уровень торговли криптовалютой.</h3>
+            <div class="footer-btns"> <a class="footer-btn btn" href="#!">Создать аккаунт  </a><a class="footer-btn footer-btn--login btn btn--border" href="#!">Войти  </a></div>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col_title accordion">Возможности</p>
+            <ul class="footer__col-list">
+              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+              <li><a href="manual.html">Пополнение криптовалюты</a></li>
+              <li><a href="manual.html">Торговые операции</a></li>
+              <li><a href="market.html">Купить Bitcoin</a></li>
+              <li><a href="market.html">Купить Etherium</a></li>
+              <li><a href="market.html">Купить USDT</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col_title accordion">Контакты</p>
+            <ul class="footer__col-list">
+              <li><a href="info.html">Центр поддержки</a></li>
+              <li><a href="mailto:support@beribit.com" target="_blank">Оставить запрос</a></li>
+              <li><a href="https://t.me/BeribitRussia" target="_blank">Официальный чат</a></li>
+              <li><a href="https://t.me/BeribitAnnouncements" target="_blank">Анонсы</a></li>
+              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+            </ul>
+            <p class="footer__col_title accordion">Поддержка</p>
+            <ul class="footer__col-list">
+              <li><a href="mailto:support@beribit.com">support@beribit.com</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col_title accordion">Условия пользования</p>
+            <ul class="footer__col-list">
+              <li><a href="info.html">О нас</a></li>
+              <li><a href="info.html">Комиссии</a></li>
+              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+            </ul>
+            <p class="footer__col_title accordion">Дополнительно</p>
+            <ul class="footer__col-list">
+              <li><a href="partners.html">Партнёры</a></li>
+              <li><a href="#">Информация о криптовалютах</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-row footer-row--border">
+          <div class="footer-logo"> <img src="./img/main/logo-footer.svg"><img class="dark" src="./img/main/logo-footerDark.svg"></div>
+          <div class="footer-center"> 
+            <div class="footer-social"> <a class="footer-social__link" href="#!"><img src="./img/main/youtube.svg" alt=""><img class="dark" src="./img/main/youtubeDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/vcru.svg" alt=""><img class="dark" src="./img/main/vcruDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/telegram.svg" alt=""><img class="dark" src="./img/main/telegramDark.svg"></a></div>
+            <div class="footer-docs"> <a class="footer-docs__link" href="#!">Пользовательское соглашение</a><a class="footer-docs__link" href="#!">Политика Cookie</a><a class="footer-docs__link" href="#!">Реферальная программа</a></div>
+          </div>
+          <div class="footer-copyright">Copyright &copy;&nbsp;2021-2024 Beribit Global Ltd.</div>
+        </div>
+      </div>
+    </footer>
+    <section class="n-popup js-popup" id="registration">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Регистрация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-title">Пароль <span class="n-popup__form-title--hint "></span>
+              <div class="n-popup__form-hint">Пароль должен быть длиной не менее 6 символов, содержать в себе, как минимум: одну цифру, один символ в нижнем и верхнем регистре и один не буквенно-цифровой символ.</div>
+            </div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-title">Подтвердите пароль</div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-title">Реферальный код</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен с <a href="#" target="_blank">Условиями обслуживания, Политикой конфиденциальности и возврата средств</a></div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я не являюсь гражданином либо резидентом США</div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен получать e-mail рассылку</div>
+            </div>
+            <div class="n-popup__btn js-popupClose">Регистрация</div>
+            <div class="n-popup__subtext">Уже есть аккаунт? <span class="js-popupOpen" data-popup="login">Авторизация<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="registration2">
+      <div class="n-popup__inner">
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Регистрация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">Выберите юрисдикцию</div>
+            <div class="select n-popup__form-select control-select-group js-selectJurisdiction">
+              <button class="select-toggle" type="button" name="country" value="RU" data-select="toggle" data-index="0"><img class="n-popup__form-select-img" src="./img/RU.svg"> Russia (Россия)</button>
+              <div class="select-dropdown">
+                <ul class="select-options">
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/RU.svg"> Russia (Россия)</li>
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/armenia.svg"> Armenia (Армения)</li>
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/belarus.svg"> Belarus (Беларусь)</li>
+                  <li class="select-option" data-select="option" data-value="RU" data-index="0"><img class="n-popup__form-select-img" src="./img/kazakhstan.svg"> Kazakhstan (Казахстан)</li>
+                  <li class="select-option" data-select="option" data-value="UZB" data-index="1"><img class="n-popup__form-select-img" src="./img/OZ.svg"> Uzbekistan (Узбекистан)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" requнуired>
+            <div class="n-popup__form-title">Реферальный код </div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-title">Пароль <span class="n-popup__form-title--hint "></span>
+              <div class="n-popup__form-hint">Пароль должен быть длиной не менее 6 символов, содержать в себе, как минимум: одну цифру, один символ в нижнем и верхнем регистре и один не буквенно-цифровой символ.</div>
+            </div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-title">Подтвердите пароль</div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен с <a href="#" target="_blank">Условиями обслуживания, Политикой конфиденциальности и возврата средств</a></div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я не являюсь гражданином либо резидентом США</div>
+            </div>
+            <div class="n-profile-table__checkbox">
+              <input class="js-settingInput" type="text" hidden name="1" value="0">
+              <div class="n-profile-table__label js-settingLabel">Я согласен получать e-mail рассылку</div>
+            </div>
+            <div class="g-recaptcha n-popup__form-recaptcha" data-sitekey="КЛЮЧ_САЙТА"></div>
+            <div class="n-popup__btn js-popupClose">Регистрация</div>
+            <div class="n-popup__subtext">Уже есть аккаунт? <span class="js-popupOpen" data-popup="login">Авторизация<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="login">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Авторизация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-title">Пароль <span class="n-popup__form-title--hint "></span>
+              <div class="n-popup__form-hint">Пароль должен быть длиной не менее 6 символов, содержать в себе, как минимум: одну цифру, один символ в нижнем и верхнем регистре и один не буквенно-цифровой символ.</div>
+            </div>
+            <div class="n-popup__form-wrapper">
+              <div class="n-popup__form-eye js-passwordShow"></div>
+              <input class="js-inputRequired n-popup__form-input" type="password" required>
+            </div>
+            <div class="n-popup__form-label n-popup__form-label--blue js-popupOpen" data-popup="reset-pass">Восстановление пароля</div>
+            <div class="n-popup__btn js-popupClose">Войти</div>
+            <div class="n-popup__subtext">Ещё не с нами? <span class="js-popupOpen" data-popup="registration">Регистрация<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="reset-pass"> 
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title n-popup__title--phone">Восстановление</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">E-mail</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__form-label">*Ссылка на восстановление будет отправлена на почту</div>
+            <div class="n-popup__btn js-popupClose">Восстановить</div>
+            <div class="n-popup__subtext">Вспомнили пароль? <span class="js-popupOpen" data-popup="login">Войти<span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="n-popup js-popup" id="login-2fa">
+      <div class="n-popup__inner"> 
+        <div class="n-popup__close js-popupClose"> </div>
+        <div class="n-popup__content">
+          <div class="n-popup__title">Авторизация</div>
+          <form class="n-popup__form">
+            <div class="n-popup__form-title">2FA authentification</div>
+            <input class="js-inputRequired n-popup__form-input" type="text" required>
+            <div class="n-popup__btn js-popupClose">Войти</div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/countUp.js"></script>
+    <script src="./js/mainSlider.js"></script>
+    <script src="./js/updateGlasses.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/simpleBar.js"></script>
+    <script src="./js/select.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="./js/body-wrapper.js"></script>
+    <script src="./js/operations-history.js"></script>
+    <div class="loader"><img src="./img/main/preloader.gif" alt="Идет загрузка"></div>
+  </body>
+</html>
