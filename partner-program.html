@@ -14,304 +14,98 @@
   </head>
   <body class="body">
     <!--include ../components/sections/header-->
-    <header class="header js-header">
-      <div class="container"><a class="header__logo" href="/"></a>
-        <div class="header__btns header__btns--tablet"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
-        <div class="burger-body js-burgerBody">
+    <header class="n-header">
+      <div class="container"><a class="n-header__main-link" href="/"><img src="./img/main/logo-new.svg"><img class="logo-dark" src="./img/main/logoDark-new.svg"><a class="n-header__reg-btn n-header__reg-btn--tablet js-popupOpen" href="#" data-popup="registration2">Регистрация</a></a>
+        <div class="n-burger-body">
           <nav>
             <ul>
-              <li><a class="link" href="market.html">Биржа</a></li>
-              <li><a class="link" href="wallet.html">Кошелёк</a></li>
-              <li><a class="link" href="p2p-main.html">P2P</a></li>
-              <li><a class="link" href="info.html">Информация</a></li>
-              <li><a class="link" href="partners.html">Партнёры</a></li>
-              <li><a class="link" href="info.html">Контакты</a></li>
+              <li><a href="market.html">Биржа</a></li>
+              <li><a href="p2p-main.html">P2P</a></li>
+              <li><a href="manual.html">Руководство</a></li>
+              <li><a href="info.html">Информация</a></li>
             </ul>
-          </nav>
-          <div class="header__btns"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
-          <footer class="burger__footer"><a class="burger__policy" href="info.html">Политика конфиденциальности</a>
-            <p class="burger__copyright">&copy;&nbsp;2024. Все права защищены </p>
-          </footer>
-        </div><a class="header_auth-user" href="#"></a>
-        <div class="header__theme-wrapper">
-          <button class="header__theme-toggler js-themeToggler"></button>
-        </div>
-        <div class="burger-btn js-burgerBtn"></div>
+          </nav><a class="n-header__auth-btn" href="login.html">Войти</a><a class="n-header__reg-btn" href="create-account.html">Регистрация</a>
+          <div class="n-header__theme-wrapper">
+            <p>Тема</p>
+            <button class="n-header__theme-toggler">
+              <div class="light-icon"><img src="./img/sun.svg"></div>
+              <div class="dark-icon"><img src="./img/moon.svg"></div>
+            </button>
+          </div>
+          <svg class="n-burger-btn close-burger" width="32" height="32" role="img">
+            <use xlink:href="./img/icons/icons.svg#closeBurger"></use>
+          </svg>
+        </div><a class="n-header_auth-user" href="#"></a>
+        <div class="n-burger-btn"></div>
       </div>
     </header>
-    <main class="n-main partner-program">
-      <section class="program-descriptor"> 
+    <main class="n-main partners">
+      <!-- Пример использования +breadcrumbs([{href: 'index', text: 'Главная страница'}, {href: 'partners', text: 'Партнёры'}, 'Партнер'])
+      -->
+      <section class="partners-descriptor"> 
         <div class="container"> 
                 <ol class="breadcrumbs">
-                  <li><a href="index.html">Главная страница</a>
+                  <li><a href="index">Главная страница</a>
                   </li>
-                  <li><span>Партнёрская программа</span>
+                  <li><a href="Партнёрская программа.html">Партнёрская программа</a>
                   </li>
                 </ol>
-          <h1 class="program-descriptor__title">Присоединяйтесь к партнерской программе BERIBIT</h1>
-          <p class="program-descriptor__text">Приглашаем к&nbsp;сотрудничеству активные и&nbsp;развивающиеся команды трейдеров, инфлюенсеров, профессиональных участников криптовалютного рынка, а&nbsp;также представителей бизнеса</p>
-          <div class="program-descriptor__btns"> <a class="program-descriptor__btn btn btn--orange" href="#form"> 
-              <p>Оставить заявку</p>
-              <svg>
-                <use xlink:href="./img/icons/icons.svg#arrow"></use>
-              </svg></a><a class="program-descriptor__btn btn btn--border" href="login.html">Уже являетесь партнёром?</a></div>
-        </div>
-      </section>
-      <section class="program-advantages">
-        <div class="container"> 
-          <div class="program-title"> 
-            <h2>Наши преимущества</h2><span>ПРЕИМУЩЕСТВА</span>
-          </div>
-          <div class="program-advantages__list"> 
-            <ul class="program-advantages__row">
-              <li class="program-advantages__item program-advantages__item--animate">
-                <h4 class="program-advantages__title">Низкие комиссии на спотовом рынке</h4>
-                <p class="program-advantages__text">Рыночный ордер 0,15%, лимитный ордер 0,10%</p><a class="program-advantages__link" href="#form">Присоединиться</a><img class="program-advantages__img" src="./img/partner-program/advantages1.svg" alt="">
-              </li>
-              <li class="program-advantages__item program-advantages__item--animate">
-                <h4 class="program-advantages__title">Коды Beribit без комиссии</h4>
-                <p class="program-advantages__text">Можно выполнить моментальный перевод между пользователями платформы бесплатно</p><a class="program-advantages__link" href="#form">Присоединиться</a><img class="program-advantages__img" src="./img/partner-program/advantages2.svg" alt="">
-              </li>
-              <li class="program-advantages__item program-advantages__item--animate">
-                <h4 class="program-advantages__title">Отсутствие комисии в разделе P2P</h4>
-                <p class="program-advantages__text">Платформа не берет комиссии при создании объявлений в разделе Р2Р</p><a class="program-advantages__link" href="#form">Присоединиться</a><img class="program-advantages__img" src="./img/partner-program/advantages3.svg" alt="">
-              </li>
-            </ul>
-            <ul class="program-advantages__row">
-              <li class="program-advantages__item">
-                <h4 class="program-advantages__title">Гибкие условия по кредитному лимиту</h4>
-                <p class="program-advantages__text">Возможность предоставления кредитного лимита (размером до ... или при оборотах от)</p>
-              </li>
-              <li class="program-advantages__item">
-                <h4 class="program-advantages__title">Реферальная программа</h4>
-                <p class="program-advantages__text">35% от&nbsp;комиссии рефералов по&nbsp;совершаемым сделкам в&nbsp;разделе Биржа</p>
-              </li>
-              <li class="program-advantages__item">
-                <h4 class="program-advantages__title">Быстрое обслуживание VIP&nbsp;клиентов</h4>
-                <p class="program-advantages__text">Предоставление VIP обслуживания клиентам с&nbsp;заявками от&nbsp;200&nbsp;000&nbsp;USDT</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="program-steps"> 
-        <div class="container"> 
-          <div class="program-title"> 
-            <h2>Подключитесь к программе за 3 простых шага!</h2><span class="dark">ПРОЩЕ ПРОСТОГО</span>
-          </div>
-          <ol class="program-steps__list"> 
-            <li class="program-steps__item"> 
-              <div class="program-steps__number">01</div>
-              <h5 class="program-steps__title">Оставьте заявку заполнив форму ниже</h5>
-              <div class="program-steps__text">Подайте заявку, заполнив указанную ниже форму. Наша команда проверит заявку и&nbsp;в&nbsp;короткие сроки предоставит индивидуальное предложение по&nbsp;сотрудничеству</div><a class="program-steps__link" href="#form">Оставить заявку</a>
-            </li>
-            <li class="program-steps__item"> 
-              <div class="program-steps__number">02</div>
-              <h5 class="program-steps__title">Пройдите регистрацию на бирже BERIBIT</h5>
-              <div class="program-steps__text">Создайте аккаунт на&nbsp;платформе. С&nbsp;его помощью&nbsp;Вы сможете отслеживать статистику реферальных ссылок и&nbsp;совершать сделки</div><a class="program-steps__link" href="create-account.html">Зарегистрироваться</a>
-            </li>
-            <li class="program-steps__item"> 
-              <div class="program-steps__number">03</div>
-              <h5 class="program-steps__title">Зарабатывайте&nbsp;35% от&nbsp;комиссий рефералов</h5>
-              <div class="program-steps__text">Когда пользователи создают аккаунт по Вашей реферальной ссылке, Вы будете получать отчисления за каждую их торговую сделку</div>
-            </li>
-          </ol>
-        </div>
-      </section>
-      <section class="program-possibility"> 
-        <div class="container"> 
-          <div class="program-possibility__inner"> 
-            <div class="program-possibility__left"> 
-              <div class="program-title program-title--short"> 
-                <h2>Возможности для партнёров BERIBIT</h2>
-              </div>
-              <p class="program-possibility__text">Мы&nbsp;ищем ключевых лидеров мнений и&nbsp;создателей контента, которые могут воплотить нашу миссию и&nbsp;ценности в&nbsp;жизнь и&nbsp;продвигать нашу торговую платформу</p>
-              <ul class="program-possibility__list"> 
-                <li class="program-possibility__item"> 
-                  <div class="program-possibility__img"> </div>
-                  <div class="program-possibility__description"> 
-                    <h6>Партнерство</h6>
-                    <p>Сотрудничайте с&nbsp;самой надежной в&nbsp;мире биржей криптовалют</p>
-                  </div>
-                </li>
-                <li class="program-possibility__item"> 
-                  <div class="program-possibility__img program-possibility__img--second"> </div>
-                  <div class="program-possibility__description"> 
-                    <h6>Прозрачность</h6>
-                    <p>Отслеживание и&nbsp;отчеты эффективности продвижения</p>
-                  </div>
-                </li>
-                <li class="program-possibility__item"> 
-                  <div class="program-possibility__img program-possibility__img--third"> </div>
-                  <div class="program-possibility__description"> 
-                    <h6>Вознаграждение</h6>
-                    <p>Вы&nbsp;получаете награду в&nbsp;той криптовалюте, в&nbsp;которой была уплачена комиссия</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="program-possibility__right"><img src="./img/partner-program/possibility.svg" alt=""></div>
-          </div>
-        </div>
-      </section>
-      <section class="program-form"> 
-        <div class="container"> 
-          <div class="program-title"> 
-            <h2>Становитесь партнёром уже сейчас!</h2><span>ОФОРМИТЕ ЗАЯВКУ</span>
-          </div>
-          <div class="program-form__inner"> 
-            <div class="program-form__left"> 
-              <div class="program-form__title">Заполните форму</div>
-              <div class="program-form__text">Предоставьте нам свои контакты и информацию о компании. Мы свяжемся с Вами и оформим партнёрскую программу!</div>
-              <form class="program-form__callback js-form" action="" method="post">
-                <div class="program-form__row"> 
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input" type="email" name="email" placeholder="" id="email">
-                    <label class="program-form__label" for="email">Адрес эл. почты *</label>
-                  </div>
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input js-requiredInput" type="text" name="fio" placeholder="" id="fio">
-                    <label class="program-form__label" for="fio">ФИО представителя *</label>
-                  </div>
-                </div>
-                <div class="program-form__row"> 
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input" type="text" name="company" placeholder="" id="company">
-                    <label class="program-form__label" for="company">Наименование компании (если есть)</label>
-                  </div>
-                </div>
-                <div class="program-form__row"> 
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input" type="text" name="link" placeholder="" id="link">
-                    <label class="program-form__label" for="link">Ссылка на сайт/проект</label>
-                  </div>
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input" type="text" name="telegram" placeholder="" id="telegram">
-                    <label class="program-form__label" for="telegram">Профиль Telegram</label>
-                  </div>
-                </div>
-                <div class="program-form__row"> 
-                  <button class="program-form__btn btn btn--orange" type="submit">Отправить</button>
-                  <p class="program-form__conditions">Нажимая на&nbsp;кнопку, Вы&nbsp;соглашаетесь c&nbsp;<a href="info.html" target="_blank">условиями обработки данных</a></p>
-                </div>
-              </form>
-            </div>
-            <div class="program-possibility__right"><img src="./img/partner-program/motivation.png" alt=""></div>
-          </div>
-        </div>
-      </section>
-      <section class="program-faq"> 
-        <div class="container"> 
-          <div class="program-title"> 
-            <h2>Часто задаваемые вопросы</h2><span class="dark">FAQ ПАРТНЁРКИ</span>
-          </div>
-          <div class="program-faq__inner">
-            <div class="program-faq__left"> 
-              <p class="program-faq__subtitle">Здесь представлены самые популярные вопросы. Полная база знаний проекта доступна <a href="info.html" target="_blank">здесь</a></p>
-              <ul class="program-faq__items"> 
-                <li class="program-faq__item js-faqItem open">
-                  <h5 class="program-faq__question">Как я&nbsp;могу зарабатывать от&nbsp;$10&nbsp;000&nbsp;в месяц?</h5>
-                  <p class="program-faq__answer">Приглашай новых пользователей по&nbsp;своей реферальной ссылке и&nbsp;получай от&nbsp;35% комиссионных.</p>
-                </li>
-                <li class="program-faq__item js-faqItem"> 
-                  <h5 class="program-faq__question">Что такое партнерская программа BERIBIT?</h5>
-                  <p class="program-faq__answer">Партнерская программа BERIBIT позволяет создавать уникальные реферальные ссылки, по&nbsp;которым вы&nbsp;можете приглашать участников вашего сообщества зарегистрироваться и&nbsp;торговать на&nbsp;BERIBIT. Если кто-то зарегистрируется по&nbsp;вашей реферальной ссылке, они будут автоматически зачислены в&nbsp;ваши рефералы. Вы&nbsp;получите комиссионное вознаграждение от&nbsp;каждой осущствленной ими сделки на&nbsp;споте, фьючерсах или марже.</p>
-                </li>
-                <li class="program-faq__item js-faqItem"> 
-                  <h5 class="program-faq__question">Как я&nbsp;могу экономить на&nbsp;комиссиях?</h5>
-                  <p class="program-faq__answer">Если вы&nbsp;являетесь партнером Beribit и&nbsp;имеете торговый оборот выше $6M&nbsp;в месяц, то&nbsp;мы&nbsp;рассмотрим заявку о&nbsp;снижении ставки комиссии для вашего аккаунта.</p>
-                </li>
-                <li class="program-faq__item js-faqItem"> 
-                  <h5 class="program-faq__question">Какие есть еще преимущества для партнеров?</h5>
-                  <p class="program-faq__answer">Партнеры Beribit имеют ряд преимуществ, в&nbsp;том числе отсутствие лимитов по&nbsp;любым операциям, круглосуточную поддержку, а&nbsp;также индивидуальные условия при обработке крупных заявок.</p>
-                </li>
-              </ul>
-            </div>
-            <div class="program-faq__form">
-              <h5 class="program-faq__title">Не нашли ответа?</h5>
-              <p class="program-faq__subtitle">Если Вы не нашли ответа на свой вопрос, то можете задать его нашей поддержке!</p>
-              <form class="program-form__callback js-form" action="" method="post">
-                <div class="program-form__row"> 
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input js-requiredInput" type="text" name="name" placeholder="" id="name">
-                    <label class="program-form__label" for="name">Ваше имя</label>
-                  </div>
-                </div>
-                <div class="program-form__row"> 
-                  <div class="program-form__wrapper js-inputWrap">
-                    <textarea class="program-form__textarea js-textareaResize js-input" name="question" placeholder="" id="question" rows="1"></textarea>
-                    <label class="program-form__label" for="question">Какой у Вас вопрос?</label>
-                  </div>
-                </div>
-                <div class="program-form__row"> 
-                  <div class="program-form__wrapper js-inputWrap">
-                    <input class="program-form__input js-input js-requiredInput" type="text" name="telegram" placeholder="" id="telegram2">
-                    <label class="program-form__label" for="telegram2">Профиль Telegram</label>
-                  </div>
-                </div>
-                <div class="program-form__row program-form__row--block"> 
-                  <button class="program-form__btn btn btn--orange" type="submit">Отправить</button>
-                  <p class="program-form__conditions"> Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь c&nbsp;<a href="info.html" target="_blank">условиями обработки данных</a></p>
-                </div>
-              </form>
-            </div>
-          </div>
+          <h1 class="partners-descriptor__title">Что такое BERIBIT?</h1>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="n-footer">
       <div class="container">
-        <div class="footer-row">
-          <div class="footer__col">
-            <h3 class="footer-title">Перейди на новый уровень торговли криптовалютой.</h3>
-            <div class="footer-btns"> <a class="footer-btn btn" href="#!">Создать аккаунт  </a><a class="footer-btn footer-btn--login btn btn--border" href="#!">Войти  </a></div>
+        <div class="n-footer-row">
+          <div class="n-footer__col">
+            <h3 class="n-footer-title">Перейди на новый уровень торговли криптовалютой.</h3><a class="n-footer-btn" href="#!">Создать аккаунт  </a><a class="n-footer-btn n-footer-btn--login" href="#!">Войти  </a>
           </div>
-          <div class="footer__col">
-            <p class="footer__col_title accordion">Возможности</p>
-            <ul class="footer__col-list">
-              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
-              <li><a href="manual.html">Пополнение криптовалюты</a></li>
-              <li><a href="manual.html">Торговые операции</a></li>
-              <li><a href="market.html">Купить Bitcoin</a></li>
-              <li><a href="market.html">Купить Etherium</a></li>
-              <li><a href="market.html">Купить USDT</a></li>
+          <div class="n-footer__col">
+            <p class="n-footer__col_title accordion">Возможности</p>
+            <ul class="n-footer__col-list">
+              <li><a href="">Поддержка 24/7</a></li>
+              <li><a href="">Регистрация</a></li>
+              <li><a href="">Пополнение баланса</a></li>
+              <li><a href="">Вывод баланса</a></li>
+              <li><a href="">Пополнение криптовалюты</a></li>
+              <li><a href="">Вывод криптовалюты</a></li>
+              <li><a href="">Код Beribit</a></li>
+              <li><a href="">Верификация</a></li>
+              <li><a href="">Торговые операции</a></li>
+              <li><a href="">Купить Bitcoin</a></li>
+              <li><a href="">Купить Ethereum</a></li>
+              <li><a href="">Купить USDT</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <p class="footer__col_title accordion">Контакты</p>
-            <ul class="footer__col-list">
-              <li><a href="info.html">Центр поддержки</a></li>
-              <li><a href="mailto:support@beribit.com" target="_blank">Оставить запрос</a></li>
-              <li><a href="https://t.me/BeribitRussia" target="_blank">Официальный чат</a></li>
-              <li><a href="https://t.me/BeribitAnnouncements" target="_blank">Анонсы</a></li>
-              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+          <div class="n-footer__col">
+            <p class="n-footer__col_title accordion">Контакты</p>
+            <ul class="n-footer__col-list">
+              <li><a href="">Центр поддержки</a></li>
+              <li><a href="">Оставить запрос</a></li>
+              <li><a href="">Официальный чат</a></li>
+              <li><a href="">Анонсы</a></li>
+              <li><a href="">Поддержка Telegram</a></li>
             </ul>
-            <p class="footer__col_title accordion">Поддержка</p>
-            <ul class="footer__col-list">
+            <p class="n-footer__col_title accordion">Юридическая информация</p>
+            <ul class="n-footer__col-list">
+              <li><a href="mailto:info@beribit.com">info@beribit.com</a></li>
               <li><a href="mailto:support@beribit.com">support@beribit.com</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <p class="footer__col_title accordion">Условия пользования</p>
-            <ul class="footer__col-list">
-              <li><a href="info.html">О нас</a></li>
-              <li><a href="info.html">Комиссии</a></li>
-              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
-            </ul>
-            <p class="footer__col_title accordion">Дополнительно</p>
-            <ul class="footer__col-list">
-              <li><a href="partners.html">Партнёры</a></li>
-              <li><a href="#">Информация о криптовалютах</a></li>
+          <div class="n-footer__col">
+            <p class="n-footer__col_title accordion">Условия<br> пользования</p>
+            <ul class="n-footer__col-list">
+              <li><a href="">О нас</a></li>
+              <li><a href="">Комиссии</a></li>
+              <li><a href="">Персональный менеджер</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-row footer-row--border">
-          <div class="footer-logo"> <img src="./img/main/logo-footer.svg"><img class="dark" src="./img/main/logo-footerDark.svg"></div>
-          <div class="footer-center"> 
-            <div class="footer-social"> <a class="footer-social__link" href="#!"><img src="./img/main/youtube.svg" alt=""><img class="dark" src="./img/main/youtubeDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/vcru.svg" alt=""><img class="dark" src="./img/main/vcruDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/telegram.svg" alt=""><img class="dark" src="./img/main/telegramDark.svg"></a></div>
-            <div class="footer-docs"> <a class="footer-docs__link" href="#!">Пользовательское соглашение</a><a class="footer-docs__link" href="#!">Политика Cookie</a><a class="footer-docs__link" href="#!">Реферальная программа</a></div>
-          </div>
-          <div class="footer-copyright">Copyright &copy;&nbsp;2021-2024 Beribit Global Ltd.</div>
+        <div class="n-footer-row n-footer-row--border">
+          <div class="n-footer-logo"> <img src="./img/main/logo-footer.svg"><img class="dark" src="./img/main/logo-footerDark.svg"></div>
+          <div class="n-footer-social"> <a class="n-footer-social__link" href="#!"><img src="./img/main/telegram.svg" alt=""><img class="dark" src="./img/main/telegramDark.svg"></a><a class="n-footer-social__link" href="#!"><img src="./img/main/youtube.svg" alt=""><img class="dark" src="./img/main/youtubeDark.svg"></a><a class="n-footer-social__link" href="#!"><img src="./img/main/vcru.svg" alt=""><img class="dark" src="./img/main/vcruDark.svg"></a></div>
+          <div class="n-footer-docs"> <a class="n-footer-docs__link" href="#!">Пользовательское соглашение</a><a class="n-footer-docs__link" href="#!">Политика Cookie</a><a class="n-footer-docs__link" href="#!">Реферальная программа</a></div>
+          <div class="n-footer-copyright">Copyright © 2021-2023 Beribit Global Ltd. </div>
         </div>
       </div>
     </footer>
@@ -472,7 +266,6 @@
     <script src="./js/popup.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="./js/body-wrapper.js"></script>
-    <script src="./js/partner-program.js"></script>
     <div class="loader"><img src="./img/main/preloader.gif" alt="Идет загрузка"></div>
   </body>
 </html>

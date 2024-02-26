@@ -22,19 +22,16 @@ $(document).on("click", ".js-biddingToggleItem", function () {
   biddingToggle.text(tabName);
 });
 $(document).ready(function () {
-  var burgerBody = $(".js-burgerBody"),
-      burgerBtn = $(".js-burgerBtn"),
-      header = $(".js-header");
-  $(burgerBtn).on("click", function () {
+  var burgerBody = $(".n-burger-body"),
+      burgerBtn = $(".n-burger-btn");
+  $(".n-burger-btn").on("click", function () {
     if ($(this).hasClass("open")) {
-      burgerBtn.removeClass("open");
-      burgerBody.removeClass("open");
-      header.removeClass("burger-open");
+      $(".n-burger-btn").removeClass("open");
+      $(".n-burger-body").removeClass("open");
       wrapperUnfixPosition();
     } else {
-      burgerBtn.addClass("open");
-      burgerBody.addClass("open");
-      header.addClass("burger-open");
+      $(".n-burger-btn").addClass("open");
+      $(".n-burger-body").addClass("open");
       wrapperFixPosition();
     }
   });
@@ -42,8 +39,18 @@ $(document).ready(function () {
     if (!burgerBody.is(e.target) && burgerBody.has(e.target).length === 0 && !burgerBtn.is(e.target) && burgerBtn.has(e.target).length === 0) {
       burgerBtn.removeClass("open");
       burgerBody.removeClass("open");
-      header.removeClass("burger-open");
       wrapperUnfixPosition();
+    }
+  }); // ! уведомления
+
+  var notificationBody = $(".js-notificationBody"),
+      notificationBtn = $(".js-notificationBtn");
+  notificationBtn.on("click", function () {
+    notificationBody.toggleClass("open");
+  });
+  $(document).mouseup(function (e) {
+    if (!notificationBody.is(e.target) && notificationBody.has(e.target).length === 0 && !notificationBtn.is(e.target) && notificationBtn.has(e.target).length === 0) {
+      notificationBody.removeClass("open");
     }
   }); // ! Табы
 
@@ -229,12 +236,12 @@ $(document).ready(function () {
   } // ! изменение темы
 
 
-  $(".js-themeToggler").on("click", function () {
+  $(".n-header__theme-toggler").on("click", function () {
     $("body").toggleClass("light");
     $("body").toggleClass("dark");
   }); // ! аккардион в футере
 
-  $(".footer__col_title.accordion").on("click", function () {
+  $(".n-footer__col_title.accordion").on("click", function () {
     $(this).toggleClass("open");
   });
   var settingLabel = $(".js-settingLabel");

@@ -13,29 +13,29 @@
   </head>
   <body class="body">
     <!--include ../components/sections/header-->
-    <header class="header js-header">
-      <div class="container"><a class="header__logo" href="/"></a>
-        <div class="header__btns header__btns--tablet"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
-        <div class="burger-body js-burgerBody">
+    <header class="n-header">
+      <div class="container"><a class="n-header__main-link" href="/"><img src="./img/main/logo-new.svg"><img class="logo-dark" src="./img/main/logoDark-new.svg"><a class="n-header__reg-btn n-header__reg-btn--tablet js-popupOpen" href="#" data-popup="registration2">Регистрация</a></a>
+        <div class="n-burger-body">
           <nav>
             <ul>
-              <li><a class="link" href="market.html">Биржа</a></li>
-              <li><a class="link" href="wallet.html">Кошелёк</a></li>
-              <li><a class="link" href="p2p-main.html">P2P</a></li>
-              <li><a class="link" href="info.html">Информация</a></li>
-              <li><a class="link" href="partners.html">Партнёры</a></li>
-              <li><a class="link" href="info.html">Контакты</a></li>
+              <li><a href="market.html">Биржа</a></li>
+              <li><a href="p2p-main.html">P2P</a></li>
+              <li><a href="manual.html">Руководство</a></li>
+              <li><a href="info.html">Информация</a></li>
             </ul>
-          </nav>
-          <div class="header__btns"><a class="header__auth btn btn--orange" href="login.html">Войти</a><a class="header__reg btn btn--border" href="create-account.html">Регистрация</a></div>
-          <footer class="burger__footer"><a class="burger__policy" href="info.html">Политика конфиденциальности</a>
-            <p class="burger__copyright">&copy;&nbsp;2024. Все права защищены </p>
-          </footer>
-        </div><a class="header_auth-user" href="#"></a>
-        <div class="header__theme-wrapper">
-          <button class="header__theme-toggler js-themeToggler"></button>
-        </div>
-        <div class="burger-btn js-burgerBtn"></div>
+          </nav><a class="n-header__auth-btn" href="login.html">Войти</a><a class="n-header__reg-btn" href="create-account.html">Регистрация</a>
+          <div class="n-header__theme-wrapper">
+            <p>Тема</p>
+            <button class="n-header__theme-toggler">
+              <div class="light-icon"><img src="./img/sun.svg"></div>
+              <div class="dark-icon"><img src="./img/moon.svg"></div>
+            </button>
+          </div>
+          <svg class="n-burger-btn close-burger" width="32" height="32" role="img">
+            <use xlink:href="./img/icons/icons.svg#closeBurger"></use>
+          </svg>
+        </div><a class="n-header_auth-user" href="#"></a>
+        <div class="n-burger-btn"></div>
       </div>
     </header>
     <main class="n-profile">
@@ -172,59 +172,58 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="n-footer">
       <div class="container">
-        <div class="footer-row">
-          <div class="footer__col">
-            <h3 class="footer-title">Перейди на новый уровень торговли криптовалютой.</h3>
-            <div class="footer-btns"> <a class="footer-btn btn" href="#!">Создать аккаунт  </a><a class="footer-btn footer-btn--login btn btn--border" href="#!">Войти  </a></div>
+        <div class="n-footer-row">
+          <div class="n-footer__col">
+            <h3 class="n-footer-title">Перейди на новый уровень торговли криптовалютой.</h3><a class="n-footer-btn" href="#!">Создать аккаунт  </a><a class="n-footer-btn n-footer-btn--login" href="#!">Войти  </a>
           </div>
-          <div class="footer__col">
-            <p class="footer__col_title accordion">Возможности</p>
-            <ul class="footer__col-list">
-              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
-              <li><a href="manual.html">Пополнение криптовалюты</a></li>
-              <li><a href="manual.html">Торговые операции</a></li>
-              <li><a href="market.html">Купить Bitcoin</a></li>
-              <li><a href="market.html">Купить Etherium</a></li>
-              <li><a href="market.html">Купить USDT</a></li>
+          <div class="n-footer__col">
+            <p class="n-footer__col_title accordion">Возможности</p>
+            <ul class="n-footer__col-list">
+              <li><a href="">Поддержка 24/7</a></li>
+              <li><a href="">Регистрация</a></li>
+              <li><a href="">Пополнение баланса</a></li>
+              <li><a href="">Вывод баланса</a></li>
+              <li><a href="">Пополнение криптовалюты</a></li>
+              <li><a href="">Вывод криптовалюты</a></li>
+              <li><a href="">Код Beribit</a></li>
+              <li><a href="">Верификация</a></li>
+              <li><a href="">Торговые операции</a></li>
+              <li><a href="">Купить Bitcoin</a></li>
+              <li><a href="">Купить Ethereum</a></li>
+              <li><a href="">Купить USDT</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <p class="footer__col_title accordion">Контакты</p>
-            <ul class="footer__col-list">
-              <li><a href="info.html">Центр поддержки</a></li>
-              <li><a href="mailto:support@beribit.com" target="_blank">Оставить запрос</a></li>
-              <li><a href="https://t.me/BeribitRussia" target="_blank">Официальный чат</a></li>
-              <li><a href="https://t.me/BeribitAnnouncements" target="_blank">Анонсы</a></li>
-              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
+          <div class="n-footer__col">
+            <p class="n-footer__col_title accordion">Контакты</p>
+            <ul class="n-footer__col-list">
+              <li><a href="">Центр поддержки</a></li>
+              <li><a href="">Оставить запрос</a></li>
+              <li><a href="">Официальный чат</a></li>
+              <li><a href="">Анонсы</a></li>
+              <li><a href="">Поддержка Telegram</a></li>
             </ul>
-            <p class="footer__col_title accordion">Поддержка</p>
-            <ul class="footer__col-list">
+            <p class="n-footer__col_title accordion">Юридическая информация</p>
+            <ul class="n-footer__col-list">
+              <li><a href="mailto:info@beribit.com">info@beribit.com</a></li>
               <li><a href="mailto:support@beribit.com">support@beribit.com</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <p class="footer__col_title accordion">Условия пользования</p>
-            <ul class="footer__col-list">
-              <li><a href="info.html">О нас</a></li>
-              <li><a href="info.html">Комиссии</a></li>
-              <li><a href="https://t.me/beribitbot" target="_blank">Поддержка 24/7</a></li>
-            </ul>
-            <p class="footer__col_title accordion">Дополнительно</p>
-            <ul class="footer__col-list">
-              <li><a href="partners.html">Партнёры</a></li>
-              <li><a href="#">Информация о криптовалютах</a></li>
+          <div class="n-footer__col">
+            <p class="n-footer__col_title accordion">Условия<br> пользования</p>
+            <ul class="n-footer__col-list">
+              <li><a href="">О нас</a></li>
+              <li><a href="">Комиссии</a></li>
+              <li><a href="">Персональный менеджер</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-row footer-row--border">
-          <div class="footer-logo"> <img src="./img/main/logo-footer.svg"><img class="dark" src="./img/main/logo-footerDark.svg"></div>
-          <div class="footer-center"> 
-            <div class="footer-social"> <a class="footer-social__link" href="#!"><img src="./img/main/youtube.svg" alt=""><img class="dark" src="./img/main/youtubeDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/vcru.svg" alt=""><img class="dark" src="./img/main/vcruDark.svg"></a><a class="footer-social__link" href="#!"><img src="./img/main/telegram.svg" alt=""><img class="dark" src="./img/main/telegramDark.svg"></a></div>
-            <div class="footer-docs"> <a class="footer-docs__link" href="#!">Пользовательское соглашение</a><a class="footer-docs__link" href="#!">Политика Cookie</a><a class="footer-docs__link" href="#!">Реферальная программа</a></div>
-          </div>
-          <div class="footer-copyright">Copyright &copy;&nbsp;2021-2024 Beribit Global Ltd.</div>
+        <div class="n-footer-row n-footer-row--border">
+          <div class="n-footer-logo"> <img src="./img/main/logo-footer.svg"><img class="dark" src="./img/main/logo-footerDark.svg"></div>
+          <div class="n-footer-social"> <a class="n-footer-social__link" href="#!"><img src="./img/main/telegram.svg" alt=""><img class="dark" src="./img/main/telegramDark.svg"></a><a class="n-footer-social__link" href="#!"><img src="./img/main/youtube.svg" alt=""><img class="dark" src="./img/main/youtubeDark.svg"></a><a class="n-footer-social__link" href="#!"><img src="./img/main/vcru.svg" alt=""><img class="dark" src="./img/main/vcruDark.svg"></a></div>
+          <div class="n-footer-docs"> <a class="n-footer-docs__link" href="#!">Пользовательское соглашение</a><a class="n-footer-docs__link" href="#!">Политика Cookie</a><a class="n-footer-docs__link" href="#!">Реферальная программа</a></div>
+          <div class="n-footer-copyright">Copyright © 2021-2023 Beribit Global Ltd. </div>
         </div>
       </div>
     </footer>
