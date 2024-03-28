@@ -26715,7 +26715,7 @@ body.dark .n-popup--arbiter-cancel .n-popup__content input, body.dark .n-popup--
   left: auto;
   right: 0;
   background-image: url(../img/consulting/bg-right.png);
-  z-index: 2;
+  z-index: 3;
 }
 .consulting__title {
   position: relative;
